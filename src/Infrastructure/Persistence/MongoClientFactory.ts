@@ -14,7 +14,6 @@ export class MongoClientFactory
 
     static async createAndConnectClient(): Promise<MongoClient> {
         const url = 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + '@' + process.env.DB_HOST + ':' + '27017' + '/' + process.env.DB_NAME + '?authSource=admin'; 
-        console.log(url);
         const client = new MongoClient(url, {ignoreUndefined: true});
 
         await client.connect();

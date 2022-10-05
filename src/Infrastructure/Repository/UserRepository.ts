@@ -10,6 +10,5 @@ export class UserRepository extends BaseRepository implements CreateUserUseCase
 
     async save(user: User): Promise<void> {
         (await this.collection()).insertOne(user);
-        console.log('user ' + user.name + ' saved');
     }
 }

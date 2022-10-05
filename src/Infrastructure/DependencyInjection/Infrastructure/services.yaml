@@ -1,8 +1,0 @@
-services:
-  randomUUIDService:
-    class: './../../Service/RandomUUIDService'
-    arguments: []
-  Infrastructure.Persistence.MongoClient:
-    factory:
-      class: './../../Persistence/MongoClientFactory'
-      method: 'createClient'
