@@ -2,7 +2,7 @@ version: '3.2'
 services:
     app:
         container_name: refueling_node
-        image: node:14
+        image: node:16
         volumes:
             - ./:/var/www/html:delegated
         links:
@@ -27,7 +27,7 @@ services:
             - MONGO_INITDB_ROOT_USERNAME=$DB_USER
             - MONGO_INITDB_ROOT_PASSWORD=$DB_PASSWORD
         ports:
-            - 7015:7017
+            - 7015:$DB_PORT
         volumes:
             - db:/data/db
 volumes:
