@@ -1,4 +1,4 @@
-import {User} from '../../../Domain/Entity/User';
+import { User } from '../../../Domain/Entity/User';
 
 export interface UserRepositoryInterface
 {

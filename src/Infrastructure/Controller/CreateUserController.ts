@@ -1,7 +1,7 @@
-import {CreateUserUseCase} from '../../Application/UseCase/CreateUser/CreateUserUseCase';
-import {UserRepository} from '../Repository/UserRepository';
-import {RandomUUIDService} from '../Service/RandomUUIDService';
-import {Request, Response} from 'express';
+import { CreateUserUseCase } from '../../Application/UseCase/CreateUser/CreateUserUseCase';
+import { UserRepository } from '../Repository/UserRepository';
+import { RandomUUIDService } from '../Service/RandomUUIDService';
+import { Request, Response } from 'express';
 
 export class CreateUserController
 {
