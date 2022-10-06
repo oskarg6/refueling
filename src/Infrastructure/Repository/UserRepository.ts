@@ -1,4 +1,3 @@
-import { WithId } from 'mongodb';
 import { UserRepositoryInterface as CreateUserUseCase } from '../../Application/UseCase/CreateUser/UserRepositoryInterface';
 import { UserRepositoryInterface as GetAllUserUseCase } from '../../Application/UseCase/GetAllUser/UserRepositoryInterface';
 import { User } from '../../Domain/Entity/User';
