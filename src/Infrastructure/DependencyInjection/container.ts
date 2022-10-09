@@ -1,6 +1,7 @@
 import { RandomUUIDService } from './../Service/RandomUUIDService';
 import { MongoClientFactory } from '../Persistence/MongoClientFactory';
 import { UserRepository } from '../Repository/UserRepository';
+import { UserAggregateFactory } from '../../Domain/Aggregate/Factory/UserAggregateFactory';
 
 /** INFRASTRUCTURE PERSISTENCE */
 export const mongoClient = MongoClientFactory.createClient();
@@ -10,3 +11,6 @@ export const randomUUIDService = new RandomUUIDService();
 
 /** INFRASTRUCTUCTURE REPOSITRIES */
 export const userRepository = new UserRepository(mongoClient);
+
+/** DOMAIN AGGREGATE FACTORY */
+export const userAggregateFactory = new UserAggregateFactory();

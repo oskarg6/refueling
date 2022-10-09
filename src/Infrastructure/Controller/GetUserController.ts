@@ -17,6 +17,6 @@ export class GetUserController
 
         const user = getUserUseCase.execute(request.params.uid);
 
-        response.send((await user));
+        response.status(200).send((await user));
     }
 }

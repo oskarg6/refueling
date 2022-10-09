@@ -18,6 +18,6 @@ export class GetAllUserController
 
         const userList = getAllUserUseCase.execute();
 
-        response.send((await userList));
+        response.status(200).send((await userList));
     }
 }

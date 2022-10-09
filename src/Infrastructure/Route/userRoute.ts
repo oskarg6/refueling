@@ -2,12 +2,12 @@ import express, {Router, Request, Response} from 'express';
 import { CreateUserController } from '../Controller/CreateUserController'; 
 import { GetAllUserController } from '../Controller/GetAllUserController';
 import { GetUserController } from '../Controller/GetUserController';
-import { randomUUIDService, userRepository } from '../DependencyInjection/container';
+import { randomUUIDService, userAggregateFactory, userRepository } from '../DependencyInjection/container';
 
 const router: Router = express.Router();
 
 router.put('/', (request: Request, response: Response) => {
-    const createUserController = new CreateUserController(randomUUIDService, userRepository);
+    const createUserController = new CreateUserController(randomUUIDService, userRepository, userAggregateFactory);
     createUserController.execute(request, response);
 });
 
